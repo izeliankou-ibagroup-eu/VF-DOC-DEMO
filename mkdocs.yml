@@ -1,0 +1,175 @@
+site_name: Visual Flow Knowledge Base
+site_url: https://visual-flow.com
+repo_url: https://github.com/ibagroup-eu/Visual-Flow-Knowledge-Base
+repo_name: ibagroup-eu/Visual-Flow-Knowledge-Base
+edit_uri:
+
+copyright: Copyright &copy; 2025 Visual Flow
+
+theme:
+  name: material
+  language: en
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+  features:
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - navigation.tracking
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.tooltips
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  generator: false
+
+nav:
+  - Home: index.md
+
+  - DevOps Manuals:
+      - About Visual Flow: devops/about-visual-flow.md
+      - Slack Notifications: devops/slack-notification.md
+      - Amazon:
+          - Installation Guide: devops/amazon/index.md
+      - Azure:
+          - Installation Guide: devops/azure/index.md
+          - Rook Ceph on AKS: devops/azure/rook-ceph-on-aks-guide-azure.md
+      - Google Cloud:
+          - Installation Guide: devops/google/index.md
+          - GCP NFS Server: devops/google/gcp-nfs-server-how-to-google.md
+      - Databricks:
+          - Installation Guide: devops/databricks/index.md
+      - Minikube:
+          - Installation Guide: devops/minikube/index.md
+
+  - User Guide:
+      - Introduction:
+          - Terminology: user-guide/introduction/terminology.md
+          - Scope and Purpose: user-guide/introduction/scope-and-purpose.md
+          - Process Overview: user-guide/introduction/process-overview.md
+
+      - Roles and Authorizations: user-guide/roles-and-authorizations/
+
+      - Project Operations:
+          - Getting Started: user-guide/project-operations/getting-started.md
+          - Create a Project: user-guide/project-operations/create-a-project.md
+          - Project Overview: user-guide/project-operations/project-overview.md
+          - Manage Project Settings: user-guide/project-operations/manage-project-settings.md
+
+      - Job Operations:
+          - Jobs Overview: user-guide/job-operations/jobs-overview/
+          - Create a Job & Stages:
+              - Create a Job Guide: user-guide/job-operations/create-a-job-available-stages/create-a-job/
+              - Available Stages:
+                  - Read: user-guide/job-operations/create-a-job-available-stages/available-stages/read.md
+                  - Write: user-guide/job-operations/create-a-job-available-stages/available-stages/write.md
+                  - Group By: user-guide/job-operations/create-a-job-available-stages/available-stages/group-by.md
+                  - Remove Duplicates: user-guide/job-operations/create-a-job-available-stages/available-stages/remove-duplicates.md
+                  - Filter: user-guide/job-operations/create-a-job-available-stages/available-stages/filter.md
+                  - Transformer: user-guide/job-operations/create-a-job-available-stages/available-stages/transformer.md
+                  - Sort: user-guide/job-operations/create-a-job-available-stages/available-stages/sort.md
+                  - Slice: user-guide/job-operations/create-a-job-available-stages/available-stages/slice.md
+                  - Pivot: user-guide/job-operations/create-a-job-available-stages/available-stages/pivot.md
+                  - Add/Update Column: user-guide/job-operations/create-a-job-available-stages/available-stages/add-update-column.md
+                  - String Functions: user-guide/job-operations/create-a-job-available-stages/available-stages/string-functions.md
+                  - Date/Time: user-guide/job-operations/create-a-job-available-stages/available-stages/date-time.md
+                  - Drop/Fill Nulls: user-guide/job-operations/create-a-job-available-stages/available-stages/drop-fill-nulls.md
+                  - Join: user-guide/job-operations/create-a-job-available-stages/available-stages/join.md
+                  - Change Data Capture: user-guide/job-operations/create-a-job-available-stages/available-stages/change-data-capture.md
+                  - Union: user-guide/job-operations/create-a-job-available-stages/available-stages/union.md
+                  - Cache: user-guide/job-operations/create-a-job-available-stages/available-stages/cache.md
+                  - Validate: user-guide/job-operations/create-a-job-available-stages/available-stages/validate.md
+
+          - Job Designer Functions: user-guide/job-operations/job-designer-functions-overview/
+          - Job Execution: user-guide/job-operations/job-execution/
+
+      - Pipeline Operations:
+          - Pipelines Overview: user-guide/pipeline-operations/pipelines-overview.md
+          - Create a Pipeline: user-guide/pipeline-operations/create-a-pipeline.md
+          - Pipeline Designer Functions Overview: user-guide/pipeline-operations/pipeline-designer-functions-overview.md
+          - Pipeline Execution: user-guide/pipeline-operations/pipeline-execution.md
+          - Scheduling a pipeline: user-guide/pipeline-operations/scheduling-a-pipeline.md
+
+  - Stages Description:
+      - Overview: stages-description/index.md
+      - Cache: stages-description/cache.md
+      - CDC: stages-description/cdc.md
+      - Container: stages-description/container.md
+      - Datetime: stages-description/datetime.md
+      - Filter: stages-description/filter.md
+      - Group By: stages-description/groupBy.md
+      - Handle Null: stages-description/handleNull.md
+      - Job: stages-description/job.md
+      - Join: stages-description/join.md
+      - Notification: stages-description/notification.md
+      - Pipeline: stages-description/pipeline.md
+      - Pivot: stages-description/pivot.md
+      - Read/Write: stages-description/ReadWrite.md
+      - Remove Duplicates: stages-description/removeDuplicates.md
+      - Slice: stages-description/slice.md
+      - Sort: stages-description/sort.md
+      - String Functions: stages-description/stringFunctions.md
+      - Transformer: stages-description/transformer.md
+      - Union: stages-description/union.md
+      - Validation: stages-description/validation.md
+      - Wait: stages-description/wait.md
+      - With Column: stages-description/withColumn.md
