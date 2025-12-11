@@ -1,0 +1,21 @@
+:root,
+[data-md-color-scheme] {
+    --md-primary-fg-color: #031b29;
+    --md-primary-fg-color--light: #052e46;
+    --md-primary-fg-color--dark: #010a10;
+    --md-accent-fg-color: #031b29;
+}
+
+.md-nav__link--active {
+    font-weight: bold;
+}
+
+.md-nav--primary .md-nav__title {
+    display: none;
+}
+
+.md-nav__item .md-nav__list {
+    border-left: 1px solid var(--md-default-fg-color--lighter);
+    margin-left: 0.5rem;
+    padding-left: 0.5rem;
+}
