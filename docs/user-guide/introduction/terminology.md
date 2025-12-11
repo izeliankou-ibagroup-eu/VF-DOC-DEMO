@@ -6,7 +6,7 @@
 
 *   **Extract** is the process of reading data from a database. In this stage, the data is collected, often from multiple and different types of sources.
 *   **Transform** is the process of converting the extracted data from its previous form into the form needed to place it into another database.
-*   **Load** is the process of writing the data into the target database.
+*   **Load** is the process of writing the data into the target database.
 
 ## Job
 
